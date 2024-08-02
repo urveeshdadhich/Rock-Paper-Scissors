@@ -1,0 +1,170 @@
+:root {
+    --primary-light: #c0bfb9;
+    --primary-dark: #cecece;
+    --secondary-dark: #A22C29;
+    --secondary-dark-hover: #da3d3a;
+    --secondary-dark-active: rgb(236, 80, 72);
+    --header: #0A100D;
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    color: #da3d3a;
+    background-color: var(--header);
+    font-size: 60px;
+
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1 {
+    font-size: 40px;
+    color: #0A100D;
+    font-weight: 900;
+    margin-top: 50px;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #0A100D;
+    border-radius: 8px;
+    font-size: 40px;
+    margin-top: 50px;
+    padding: 5px;
+    gap: 3px;
+}
+
+.player-score,
+.cpu-score {
+    display: flex;
+    gap: 6px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.team1,
+.team2 {
+    align-items;
+    font-size: 50px;
+    color: black;
+    margin-top: 50px;
+}
+
+.team1 {
+    display: inline-block;
+    align-self: flex-end;
+}
+
+
+.score-box {
+    border: 4px solid #5b5f68;
+    border-radius: 8px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+
+.player-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+
+}
+
+.btn {
+    border: 3px solid #0A100D;
+    border-radius: 8px;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: var(--secondary-dark);
+}
+
+.btn:hover {
+    background-color: var(--secondary-dark-hover);
+}
+
+.btn:active {
+    background-color: var(--secondary-dark-active);
+}
+
+.footer {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--header);
+    text-align: center;
+    font-size: 30px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 300ms ease-in-out;
+    flex-direction: column;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn#restartBtn {
+    text-align: center;
+    width: 200px;
+    height: auto;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
